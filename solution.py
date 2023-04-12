@@ -14,6 +14,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    stat, pval = ks_2samp(x, y, alternative="two-sided")
+    stat, pval = anderson_ksamp([x, y])
     
     return pval < 0.03 # Ваш ответ, True или False
